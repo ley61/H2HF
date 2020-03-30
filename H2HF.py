@@ -30,9 +30,9 @@ class H2:
         self.__S = self.__K*(pi/self.__atot)**1.5
         # kinetic matrix
         self.__T = self.__ar*(3. - 2.*self.__ar*normR)*self.__S
-        # nuclear matrix
+        # single particle matrix
         self.__h = self.__T + self.__V(RA) + self.__V(RB)
-        # two electrons matrix
+        # two particles matrix
         Q = np.zeros((self.n, self.n, self.n, self.n))
         for p in range(self.n):
             for q in range(p+1):
