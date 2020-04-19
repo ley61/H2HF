@@ -108,17 +108,17 @@ for i, RBxi in enumerate(RBx):
     E[i] = h2i(1e-6)[0]
     text += str(RBxi) + ' ' + str(h2i.E) + '\n'
 # store data on a file
-with open('bonding_energy.txt', 'w+') as f:
+with open('binding_energy.txt', 'w+') as f:
     f.write(text)
 del text
 # plot
 plt.plot(RBx, E)
 plt.xlabel('R ($a_0$)')
 plt.ylabel('B.E. (Hartree)')
-plt.savefig('bonding_energy.pdf')
-# equilibrium bonding length
+plt.savefig('binding_energy.pdf')
+# equilibrium bond length
 i = np.argmin(E)
-print('Equilibrium bonding energy: ', E[i], ' (Hartree)')
+print('Equilibrium binding energy: ', E[i], ' (Hartree)')
 print('Equilibrium bond length: ', RBx[i], ' (a0)')
 
 print('\n##################################################')
